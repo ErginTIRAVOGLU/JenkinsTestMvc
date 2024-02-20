@@ -1,6 +1,4 @@
-﻿
-	agent any	
-	stages {
+﻿	stages {
 		stage('Checkout Stage') {
 			steps
 			{
