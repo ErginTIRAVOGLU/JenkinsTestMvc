@@ -1,21 +1,13 @@
-﻿pipeline 
-{
-	agent any
-	environment 
-	{
-        dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
-    }
-	stages 
-	{
-		stage('Checkout Stage')
-		{
+﻿pipeline {
+	agent any	
+	stages {
+		stage('Checkout Stage') {
 			steps
 			{
 				git url: 'https://github.com/ErginTIRAVOGLU/JenkinsTestMvc.git', branch: 'main'
 			}
 		}		 
-		stage('Release Stage') 
-		{
+		stage('Release Stage') {
 			steps 
 			{
 				bat 'net stop "w3svc"'
