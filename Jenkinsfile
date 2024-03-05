@@ -1,9 +1,6 @@
 ﻿pipeline {
     agent any
     
-    triggers {
-        pollSCM('* * * * *') // Her 1 dakikada bir GitHub deposunu kontrol et
-    }
     
     stages {
         stage('Clone repository') {
